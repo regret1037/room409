@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择</title>
+    <link rel="stylesheet" href="select.css">
+</head>
+<body>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="music/backgroundmusic.mp3" type="audio/mpeg">
+    </audio>
+    <button id="playPauseBtn">背景音乐</button>
+    <div class="menu-wrapper">
+        <button id="close-button" class="close-button">返回</button>
+        <div class="menu-container">
+        </div>
+    </div>
+    <div class="menu-container">
+        <div class="menu-item">
+          <img src="image/image1.webp" alt="Image 1">
+          <div class="description">董恒志的世界</div>
+          <button class="menu-button" id="dhz">进入</button>
+        </div>
+        <div class="menu-item">
+          <img src="image/image2.webp" alt="Image 2">
+          <div class="description">王安政的世界</div>
+          <button class="menu-button" id="waz">进入</button>
+        </div>
+        <div class="menu-item">
+          <img src="image/image3.webp" alt="Image 3">
+          <div class="description">杨睿的世界</div>
+          <button class="menu-button" id="yr">进入</button>
+        </div>
+        <div class="menu-item">
+          <img src="image/image4.webp" alt="Image 4">
+          <div class="description">胡潇的世界</div>
+          <button class="menu-button" id="hx">进入</button>
+        </div>
+      </div>
+      <script>
+document.querySelectorAll('.menu-button').forEach(button => {
+  button.addEventListener('click', function() {
+    var clickSound = new Audio('music/click.mp3'); // 假设你有一个名为click.mp3的音效文件
+    clickSound.play();
+  });
+});
+document.querySelectorAll('.close-button').forEach(button2 => {
+  button2.addEventListener('click', function() {
+    var clickSound2 = new Audio('music/click.mp3'); // 假设你有一个名为click.mp3的音效文件
+    clickSound2.play();
+  });
+});
+var audio = document.getElementById('backgroundMusic');
+        var playPauseBtn = document.getElementById('playPauseBtn');
+        audio.play();
+        playPauseBtn.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                playPauseBtn.textContent = '关闭背景音';
+            } else {
+                audio.pause();
+                playPauseBtn.textContent = '播放背景音';
+            }
+        });
+        var back = document.getElementById('close-button');
+        back.addEventListener('click', function() {
+        window.location.href = 'index.html';
+        });
+        var dhz = document.getElementById('dhz');
+        dhz.addEventListener('click', function() {
+        setTimeout(function() {
+        window.location.href = 'https://tg816.github.io/dhz837/';
+        }, 500);
+        });
+        var waz = document.getElementById('waz');
+        waz.addEventListener('click', function() {
+        setTimeout(function() {
+        window.location.href = 'index.html';
+        }, 500);
+        });
+        var yr = document.getElementById('yr');
+        yr.addEventListener('click', function() {
+        setTimeout(function() {
+        window.location.href = 'https://dd437.github.io/yr859/';
+        }, 500);
+        });
+        var hx = document.getElementById('hx');
+        hx.addEventListener('click', function() {
+        setTimeout(function() {
+        window.location.href = 'index.html';
+        }, 500);
+        });
+      </script>
+</body>
+</html>

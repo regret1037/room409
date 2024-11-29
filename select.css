@@ -1,0 +1,67 @@
+body{
+    background-image: url(image/Dirt_background_JE2.webp);
+    background-size: cover;
+}
+.menu-wrapper {
+    position: relative; /* 设置相对定位，以便绝对定位子元素 */
+  }  
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60vw; /* 视口宽度的75% */
+    height: 80vh; /* 视口高度的80% */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #6f6f6f98; /* 添加边框 */
+    border-width: 6vh 0.8vw 3vh 0.8vw;
+    z-index: 1000;
+    overflow: hidden; /* 确保边框不会因内容溢出而断裂 */
+    font-family: '仿宋', sans-serif; /* 设置字体为仿宋 */
+    gap: 5px;
+  }
+  
+  .menu-item {
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%; /* 使图片和按钮的高度与div一样高 */
+    margin: 0 10px;
+    border: 2px solid #fff;
+    font-size: 3vh;
+  }
+  
+  .menu-item img {
+    width: 19vh;
+    height: 100%; /* 图片高度与div一样高 */
+    object-fit: cover;
+  }
+  
+  .description {
+    flex-grow: 1;
+    margin: 0 10px;
+    text-align: center;
+    color: white; /* 文字颜色为白色 */
+  }
+  
+  .menu-button {
+    background-color: #6f6f6f;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    height: 95%; /* 按钮高度与div一样高 */
+    width: 15vh;
+  }
+  
+  .menu-button:hover {
+    border: 2px solid white; /* 鼠标悬停时出现白色边框效果 */
+  }

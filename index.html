@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超级409</title>
+    <link rel="stylesheet" href="409.css">
+</head>
+<body>
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="music/backgroundmusic.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="clickSound" src="music/click.mp3" preload="auto"></audio>
+    
+    <button id="playPauseBtn">背景音乐</button>
+    <button id="begin" >开始游戏</button>
+    <script>
+        var audio = document.getElementById('backgroundMusic');
+        var playPauseBtn = document.getElementById('playPauseBtn');
+        audio.play();
+        playPauseBtn.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                playPauseBtn.textContent = '关闭背景音';
+            } else {
+                audio.pause();
+                playPauseBtn.textContent = '播放背景音';
+            }
+        });
+        var clickSound = document.getElementById('clickSound');
+        playPauseBtn.addEventListener('click', function() {
+        clickSound.currentTime = 0; 
+        clickSound.play();
+    });
+    var begin = document.getElementById('begin');
+        begin.addEventListener('click', function() {
+        clickSound.currentTime = 0; 
+        clickSound.play();
+    });
+
+    begin.addEventListener('click', function() {
+        setTimeout(function() {
+        window.location.href = 'select.html';
+        }, 500);
+        });
+    </script>
+</body>
+</html>

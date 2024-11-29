@@ -1,0 +1,38 @@
+body{
+    background-image:url(image/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
+button{
+background-color: #6f6f6f;
+font-family: '仿宋';
+color: #fff;
+}
+button:hover{
+    border: 1px solid white;
+}
+#playPauseBtn{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 5vh;
+    width: 8vw;
+    font-size: 2vh;
+}
+
+/* 设置中央按钮的样式 */
+#begin {
+    position: absolute;
+    top: 65vh;
+    height: 5vh;
+    width: 20vw;
+    border-radius: 3px;
+    font-size: 3vh;
+}
