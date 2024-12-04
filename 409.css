@@ -27,7 +27,6 @@ button:hover{
     border-radius: 3px;
     font-size: 3vh;
 }
-
 #playPauseBtn{
     position: absolute;
     top: 72vh;
