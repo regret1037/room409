@@ -7,8 +7,8 @@ body, html {
     height: 100%;
     margin: 0;
     display: flex;
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
+    justify-content: center; 
+    align-items: center; 
 }
 button{
 background-color: #6f6f6f;
@@ -18,16 +18,25 @@ color: #fff;
 button:hover{
     border: 1px solid white;
 }
-#playPauseBtn{
+#exit{
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 72vh;
     height: 5vh;
-    width: 8vw;
-    font-size: 2vh;
+    right: 40vw;
+    width: 9.5vw;
+    border-radius: 3px;
+    font-size: 3vh;
 }
 
-/* 设置中央按钮的样式 */
+#playPauseBtn{
+    position: absolute;
+    top: 72vh;
+    height: 5vh;
+    left: 40vw;
+    width: 9.5vw;
+    border-radius: 3px;
+    font-size: 3vh;
+}
 #begin {
     position: absolute;
     top: 65vh;
