@@ -12,8 +12,9 @@
     </audio>
     <audio id="clickSound" src="music/click.mp3" preload="auto"></audio>
     
-    <button id="playPauseBtn">背景音乐</button>
     <button id="begin" >开始游戏</button>
+    <button id="playPauseBtn">背景音乐</button>
+    <button id="exit">退出寝室</button>
     <script>
         var audio = document.getElementById('backgroundMusic');
         var playPauseBtn = document.getElementById('playPauseBtn');
@@ -41,6 +42,18 @@
     begin.addEventListener('click', function() {
         setTimeout(function() {
         window.location.href = 'select.html';
+        }, 500);
+        });
+
+    var exit = document.getElementById('exit');
+        exit.addEventListener('click', function() {
+        clickSound.currentTime = 0; 
+        clickSound.play();
+    });
+
+    exit.addEventListener('click', function() {
+        setTimeout(function() {
+        window.location.href = 'https://herbstwind.github.io/classweb';
         }, 500);
         });
     </script>
