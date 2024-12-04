@@ -41,13 +41,13 @@
       <script>
 document.querySelectorAll('.menu-button').forEach(button => {
   button.addEventListener('click', function() {
-    var clickSound = new Audio('music/click.mp3'); // 假设你有一个名为click.mp3的音效文件
+    var clickSound = new Audio('music/click.mp3'); 
     clickSound.play();
   });
 });
 document.querySelectorAll('.close-button').forEach(button2 => {
   button2.addEventListener('click', function() {
-    var clickSound2 = new Audio('music/click.mp3'); // 假设你有一个名为click.mp3的音效文件
+    var clickSound2 = new Audio('music/click.mp3'); 
     clickSound2.play();
   });
 });
@@ -65,7 +65,9 @@ var audio = document.getElementById('backgroundMusic');
         });
         var back = document.getElementById('close-button');
         back.addEventListener('click', function() {
+        setTimeout(function() {
         window.location.href = 'index.html';
+        }, 500);
         });
         var dhz = document.getElementById('dhz');
         dhz.addEventListener('click', function() {
